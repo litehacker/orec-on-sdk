@@ -1,0 +1,32 @@
+{
+  "name": "orec-on-sdk",
+  "version": "1.0.0",
+  "description": "OREC.ON.API generated from public swagger directory",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/litehacker/orec-on-sdk.git"
+  },
+  "keywords": [
+    "orec",
+    "api",
+    "on",
+    "orec-api",
+    "orec",
+    "api"
+  ],
+  "author": "Giorgi Gvimradze",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/litehacker/orec-on-sdk/issues"
+  },
+  "homepage": "https://github.com/litehacker/orec-on-sdk#readme",
+  "devDependencies": {
+    "typescript": "^4.9.5"
+  }
+}

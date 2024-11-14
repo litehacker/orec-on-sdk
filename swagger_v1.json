@@ -1,0 +1,4428 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "OREC.ON.API",
+    "version": "1.0"
+  },
+  "paths": {
+    "/auth/deliver-login-response": {
+      "post": {
+        "tags": ["Auth"],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AuthPhoneNumberSIMLoginResponse"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AuthPhoneNumberSIMLoginResponse"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/AuthPhoneNumberSIMLoginResponse"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/auth/deliver-app-login-response": {
+      "post": {
+        "tags": ["Auth"],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AuthAppLoginResponse"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AuthAppLoginResponse"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/AuthAppLoginResponse"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/auth/deliver-verification-code-response": {
+      "post": {
+        "tags": ["Auth"],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AuthAppVerificationCodeResponse"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AuthAppVerificationCodeResponse"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/AuthAppVerificationCodeResponse"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/auth/deliver-crm-token-login-response": {
+      "post": {
+        "tags": ["Auth"],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AuthCRMTokenLoginResponse"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AuthCRMTokenLoginResponse"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/AuthCRMTokenLoginResponse"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/documents/get-file-information": {
+      "get": {
+        "tags": ["Document"],
+        "parameters": [
+          {
+            "name": "idOfSubject",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "FileId",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/documents/get-file-download": {
+      "get": {
+        "tags": ["Document"],
+        "parameters": [
+          {
+            "name": "idOfSubject",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "FileId",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/documents/get-multiple-files-download": {
+      "get": {
+        "tags": ["Document"],
+        "parameters": [
+          {
+            "name": "IdOfSubject",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "FileIds",
+            "in": "query",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "410": {
+            "description": "Client Error",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Server Error"
+          }
+        }
+      }
+    },
+    "/documents/upload-file": {
+      "post": {
+        "tags": ["Document"],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "File": {
+                    "type": "string",
+                    "format": "binary"
+                  },
+                  "IdOfSubject": {
+                    "type": "string"
+                  },
+                  "Company": {
+                    "type": "string"
+                  },
+                  "System": {
+                    "type": "string"
+                  },
+                  "ExpiryDateOfFile": {
+                    "type": "string",
+                    "format": "date-time"
+                  },
+                  "ShouldBeDeletedAfterExpiry": {
+                    "type": "boolean"
+                  }
+                }
+              },
+              "encoding": {
+                "File": {
+                  "style": "form"
+                },
+                "IdOfSubject": {
+                  "style": "form"
+                },
+                "Company": {
+                  "style": "form"
+                },
+                "System": {
+                  "style": "form"
+                },
+                "ExpiryDateOfFile": {
+                  "style": "form"
+                },
+                "ShouldBeDeletedAfterExpiry": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/documents/submit-files": {
+      "post": {
+        "tags": ["Document"],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/SubmitFile"
+                }
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/SubmitFile"
+                }
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/SubmitFile"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/documents/delete-file": {
+      "post": {
+        "tags": ["Document"],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "IdOfSubject": {
+                    "type": "string"
+                  },
+                  "FileId": {
+                    "type": "string"
+                  }
+                }
+              },
+              "encoding": {
+                "IdOfSubject": {
+                  "style": "form"
+                },
+                "FileId": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/documents/delete-file-permanently": {
+      "post": {
+        "tags": ["Document"],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "IdOfSubject": {
+                    "type": "string"
+                  },
+                  "FileId": {
+                    "type": "string"
+                  }
+                }
+              },
+              "encoding": {
+                "IdOfSubject": {
+                  "style": "form"
+                },
+                "FileId": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/example/hello": {
+      "get": {
+        "tags": ["Example"],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/example/who-am-i": {
+      "get": {
+        "tags": ["Example"],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserInfo"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserInfo"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserInfo"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/example/echo": {
+      "post": {
+        "tags": ["Example"],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EchoPostBody"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EchoPostBody"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/EchoPostBody"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/EchoPostBody"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EchoPostBody"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EchoPostBody"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/ocean/deliver-get-user-info-external-response": {
+      "post": {
+        "tags": ["Ocean"],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/OceanGetUserInfoExternalResponse"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/OceanGetUserInfoExternalResponse"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/OceanGetUserInfoExternalResponse"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/ocean/deliver-set-user-password-in-ocean-response": {
+      "post": {
+        "tags": ["Ocean"],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SetUserOrecPasswordResponse"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SetUserOrecPasswordResponse"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/SetUserOrecPasswordResponse"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/on-claims/deliver-claims-response": {
+      "post": {
+        "tags": ["OnClaims"],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BusClaimsResponse"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BusClaimsResponse"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/BusClaimsResponse"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/on-claims/deliver-claim-document-response": {
+      "post": {
+        "tags": ["OnClaims"],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BusClaimDocumentResponse"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BusClaimDocumentResponse"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/BusClaimDocumentResponse"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/on-claims/deliver-collection-letter-document-response": {
+      "post": {
+        "tags": ["OnClaims"],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BusCollectionLetterDocumentResponse"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BusCollectionLetterDocumentResponse"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/BusCollectionLetterDocumentResponse"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/on-customer-statement/deliver-customer-statement-response": {
+      "post": {
+        "tags": ["OnCustomerStatement"],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BusCustomerStatementResponse"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BusCustomerStatementResponse"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/BusCustomerStatementResponse"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/on-energy-usage/get-energy-usage": {
+      "get": {
+        "tags": ["OnEnergyUsage"],
+        "parameters": [
+          {
+            "name": "PeriodType",
+            "in": "query",
+            "schema": {
+              "enum": ["Billing", "Year", "Month", "Week", "Day"],
+              "type": "string"
+            }
+          },
+          {
+            "name": "PeriodIdentifier",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "PeriodGranularity",
+            "in": "query",
+            "schema": {
+              "enum": ["Month", "Day", "Hour"],
+              "type": "string"
+            }
+          },
+          {
+            "name": "CustomerSSN",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "MeteringPointIdentifierType",
+            "in": "query",
+            "schema": {
+              "enum": ["HomeElectricity", "HomeHeating", "CarCharging"],
+              "type": "string"
+            }
+          },
+          {
+            "name": "MeteringPointIdentifier",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "DataScope",
+            "in": "query",
+            "schema": {
+              "enum": [
+                "MyUsage",
+                "MyForecastedUsage",
+                "MyComparisonGroupUsage"
+              ],
+              "type": "string"
+            }
+          },
+          {
+            "name": "IncludeChunkUsageBreakdown",
+            "in": "query",
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
+            "name": "IncludeChunkUsageTariffBreakdown",
+            "in": "query",
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
+            "name": "IncludeChunkUsageStatusBreakdown",
+            "in": "query",
+            "schema": {
+              "type": "boolean"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/on-energy-usage/deliver-metering-point-response": {
+      "post": {
+        "tags": ["OnEnergyUsage"],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/OnEnergyUsageMeteringPointDeliveryDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/OnEnergyUsageMeteringPointDeliveryDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/OnEnergyUsageMeteringPointDeliveryDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/on-home-charge/get-order-house-form-initial-data": {
+      "get": {
+        "tags": ["OnHomecharge"],
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/on-home-charge/get-order-apartment-form-initial-data": {
+      "get": {
+        "tags": ["OnHomecharge"],
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/on-home-charge/get-order-apartment-complex-foundation-form-initial-data": {
+      "get": {
+        "tags": ["OnHomecharge"],
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/on-home-charge/get-order-company-foundation-form-initial-data": {
+      "get": {
+        "tags": ["OnHomecharge"],
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/on-home-charge/submit-order-house-form-data": {
+      "post": {
+        "tags": ["OnHomecharge"],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/OrderHouseSubmittedData"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/OrderHouseSubmittedData"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/OrderHouseSubmittedData"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/on-home-charge/submit-order-apartment-form-data": {
+      "post": {
+        "tags": ["OnHomecharge"],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/OrderApartmentSubmittedData"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/OrderApartmentSubmittedData"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/OrderApartmentSubmittedData"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/on-home-charge/submit-order-apartment-complex-foundation-form-data": {
+      "post": {
+        "tags": ["OnHomecharge"],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/OrderApartmentComplexFoundationSubmittedData"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/OrderApartmentComplexFoundationSubmittedData"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/OrderApartmentComplexFoundationSubmittedData"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/on-home-charge/submit-order-company-foundation-form-data": {
+      "post": {
+        "tags": ["OnHomecharge"],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/OrderCompanyFoundationSubmittedData"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/OrderCompanyFoundationSubmittedData"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/OrderCompanyFoundationSubmittedData"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/on-invoices/deliver-invoices-response": {
+      "post": {
+        "tags": ["OnInvoices"],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BusInvoicesResponse"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BusInvoicesResponse"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/BusInvoicesResponse"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/on-invoices/deliver-invoice-document-response": {
+      "post": {
+        "tags": ["OnInvoices"],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BusInvoiceDocumentResponse"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BusInvoiceDocumentResponse"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/BusInvoiceDocumentResponse"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/on-ocean-router/deliver-ocean-token-auth-response": {
+      "post": {
+        "tags": ["OnOceanRouter"],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BusOceanTokenAuthResponse"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BusOceanTokenAuthResponse"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/BusOceanTokenAuthResponse"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/on-payments/deliver-get-customer-response": {
+      "post": {
+        "tags": ["OnPayments"],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/OnPaymentsGetCustomerResponse"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/OnPaymentsGetCustomerResponse"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/OnPaymentsGetCustomerResponse"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/on-payments/customer-set-simple-payment-method": {
+      "post": {
+        "tags": ["OnPayments"],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/OnPaymentsSetSimplePaymentMethodRequestPayload"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/OnPaymentsSetSimplePaymentMethodRequestPayload"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/OnPaymentsSetSimplePaymentMethodRequestPayload"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/on-payments/deliver-get-card-registration-form-info-response": {
+      "post": {
+        "tags": ["OnPayments"],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BusOnPaymentsGetCheckoutPageResponse"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BusOnPaymentsGetCheckoutPageResponse"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/BusOnPaymentsGetCheckoutPageResponse"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/on-payments/deliver-get-result-for-checkout-page-response": {
+      "post": {
+        "tags": ["OnPayments"],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BusOnPaymentsGetResultForCheckoutPageResponse"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BusOnPaymentsGetResultForCheckoutPageResponse"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/BusOnPaymentsGetResultForCheckoutPageResponse"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/switchon/deliver-login-response": {
+      "post": {
+        "tags": ["SwitchON"],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ORECSIMLoginResponse"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ORECSIMLoginResponse"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ORECSIMLoginResponse"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/switchon/deliver-properties-response": {
+      "post": {
+        "tags": ["SwitchON"],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BusPropertiesResponse"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BusPropertiesResponse"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/BusPropertiesResponse"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/switchon/submit-onboarding-data": {
+      "post": {
+        "tags": ["SwitchON"],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/OnboardingSubmittedData"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/OnboardingSubmittedData"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/OnboardingSubmittedData"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/utils/health": {
+      "get": {
+        "tags": ["Utils"],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/utils/who-am-i": {
+      "get": {
+        "tags": ["Utils"],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserInfo"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserInfo"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserInfo"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/utils/who-am-i-on": {
+      "get": {
+        "tags": ["Utils"],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserInfo"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserInfo"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserInfo"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "ACconnectorType": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "AuthAppLoginResponse": {
+        "type": "object",
+        "properties": {
+          "callbackCorrelationId": {
+            "type": "string",
+            "nullable": true
+          },
+          "uiRequestId": {
+            "type": "string",
+            "nullable": true
+          },
+          "authAppLoginResponseType": {
+            "enum": ["Failure", "Success", "Cancelled", "Error"],
+            "type": "string",
+            "nullable": true
+          },
+          "personNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "fullname": {
+            "type": "string",
+            "nullable": true
+          },
+          "eidToken": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "AuthAppVerificationCodeResponse": {
+        "type": "object",
+        "properties": {
+          "uiRequestId": {
+            "type": "string",
+            "nullable": true
+          },
+          "callbackCorrelationId": {
+            "type": "string",
+            "nullable": true
+          },
+          "verificationCode": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "AuthCRMTokenLoginResponse": {
+        "type": "object",
+        "properties": {
+          "callbackCorrelationId": {
+            "type": "string",
+            "nullable": true
+          },
+          "isCRMValidToken": {
+            "type": "boolean"
+          },
+          "userName": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "AuthPhoneNumberSIMLoginResponse": {
+        "type": "object",
+        "properties": {
+          "sagaId": {
+            "type": "string",
+            "nullable": true
+          },
+          "callbackCorrelationId": {
+            "type": "string",
+            "nullable": true
+          },
+          "authPhoneNumberSIMLoginResponseType": {
+            "enum": ["Failure", "Success", "Cancelled", "Error"],
+            "type": "string",
+            "nullable": true
+          },
+          "phoneNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "personNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "fullname": {
+            "type": "string",
+            "nullable": true
+          },
+          "eidToken": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "BusClaimDocumentResponse": {
+        "type": "object",
+        "properties": {
+          "callbackCorrelationId": {
+            "type": "string",
+            "nullable": true
+          },
+          "documentReferenceToken": {
+            "type": "string",
+            "nullable": true
+          },
+          "fileId": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "BusClaimsResponse": {
+        "type": "object",
+        "properties": {
+          "callbackCorrelationId": {
+            "type": "string",
+            "nullable": true
+          },
+          "claims": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Claim"
+            },
+            "nullable": true
+          },
+          "dateFrom": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "dateTo": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "additionalProperties": false
+      },
+      "BusCollectionLetterDocumentResponse": {
+        "type": "object",
+        "properties": {
+          "callbackCorrelationId": {
+            "type": "string",
+            "nullable": true
+          },
+          "documentReferenceToken": {
+            "type": "string",
+            "nullable": true
+          },
+          "fileId": {
+            "type": "string",
+            "nullable": true
+          },
+          "stage": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "BusCustomerStatementResponse": {
+        "type": "object",
+        "properties": {
+          "callbackCorrelationId": {
+            "type": "string",
+            "nullable": true
+          },
+          "customerStatement": {
+            "$ref": "#/components/schemas/CustomerStatement"
+          }
+        },
+        "additionalProperties": false
+      },
+      "BusInvoiceDocumentResponse": {
+        "type": "object",
+        "properties": {
+          "callbackCorrelationId": {
+            "type": "string",
+            "nullable": true
+          },
+          "documentReferenceToken": {
+            "type": "string",
+            "nullable": true
+          },
+          "fileId": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "BusInvoicesResponse": {
+        "type": "object",
+        "properties": {
+          "callbackCorrelationId": {
+            "type": "string",
+            "nullable": true
+          },
+          "invoices": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Invoice"
+            },
+            "nullable": true
+          },
+          "dateFrom": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "dateTo": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "additionalProperties": false
+      },
+      "BusOceanTokenAuthResponse": {
+        "type": "object",
+        "properties": {
+          "requestId": {
+            "type": "string",
+            "nullable": true
+          },
+          "userInfo": {
+            "$ref": "#/components/schemas/DuskyUserInfo"
+          }
+        },
+        "additionalProperties": false
+      },
+      "BusOnPaymentsGetCheckoutPageResponse": {
+        "type": "object",
+        "properties": {
+          "formID": {
+            "type": "string",
+            "nullable": true
+          },
+          "callbackCorrelationId": {
+            "type": "string",
+            "nullable": true
+          },
+          "checkOutPageUrl": {
+            "type": "string",
+            "format": "uri",
+            "nullable": true
+          },
+          "isError": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "BusOnPaymentsGetResultForCheckoutPageResponse": {
+        "type": "object",
+        "properties": {
+          "formID": {
+            "type": "string",
+            "nullable": true
+          },
+          "status": {
+            "type": "string",
+            "nullable": true
+          },
+          "callbackCorrelationId": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "BusPropertiesResponse": {
+        "type": "object",
+        "properties": {
+          "callbackCorrelationId": {
+            "type": "string",
+            "nullable": true
+          },
+          "notServicedByON": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/MeteringPointInfo"
+            },
+            "nullable": true
+          },
+          "alreadyServicedByON": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/MeteringPointInfo"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Claim": {
+        "type": "object",
+        "properties": {
+          "claimNo": {
+            "type": "string",
+            "nullable": true
+          },
+          "ssn": {
+            "type": "string",
+            "nullable": true
+          },
+          "ssnClaimant": {
+            "type": "string",
+            "nullable": true
+          },
+          "claimType": {
+            "enum": [
+              "Unknown",
+              "AN",
+              "DB",
+              "EF",
+              "G",
+              "GA",
+              "GD",
+              "GK",
+              "GS",
+              "LG",
+              "LX",
+              "MA",
+              "MT",
+              "RK",
+              "RR",
+              "VE",
+              "_04",
+              "_05",
+              "_07",
+              "_11",
+              "_13",
+              "_16",
+              "_30"
+            ],
+            "type": "string"
+          },
+          "paymentMethod": {
+            "enum": [
+              "Unknown",
+              "AN",
+              "BSL",
+              "BSS",
+              "BS1",
+              "BS2",
+              "BS3",
+              "BS4",
+              "BS5",
+              "BS6",
+              "BS7",
+              "BDL",
+              "BDS",
+              "BD1",
+              "BD2",
+              "BD3",
+              "BD4",
+              "BD5",
+              "BD6",
+              "BD7",
+              "BG",
+              "BRG",
+              "DB",
+              "EFS",
+              "GA",
+              "GS",
+              "GV",
+              "HA",
+              "HG",
+              "HP",
+              "K",
+              "LG",
+              "LGX",
+              "MA",
+              "MT",
+              "N",
+              "NE",
+              "RK",
+              "RO",
+              "RR",
+              "RS",
+              "RV",
+              "SD",
+              "VE",
+              "_12",
+              "_13"
+            ],
+            "type": "string"
+          },
+          "paymentMethodDescription": {
+            "type": "string",
+            "nullable": true
+          },
+          "deadlineDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "dueDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "isPaid": {
+            "type": "boolean"
+          },
+          "originalAmount": {
+            "type": "number",
+            "format": "double"
+          },
+          "currentAmount": {
+            "type": "number",
+            "format": "double"
+          },
+          "otherCost": {
+            "type": "number",
+            "format": "double"
+          },
+          "latePaymentFee": {
+            "type": "number",
+            "format": "double"
+          },
+          "interestRates": {
+            "type": "number",
+            "format": "double"
+          },
+          "totalPayment": {
+            "type": "number",
+            "format": "double"
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "paymentProcessDescription": {
+            "type": "string",
+            "nullable": true
+          },
+          "noteNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "referralClaim": {
+            "type": "string",
+            "nullable": true
+          },
+          "collectionLetters": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CollectionLetter"
+            },
+            "nullable": true
+          },
+          "documentReferenceToken": {
+            "type": "string",
+            "nullable": true
+          },
+          "companyId": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "CollectionLetter": {
+        "type": "object",
+        "properties": {
+          "claimNo": {
+            "type": "string",
+            "nullable": true
+          },
+          "stageCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "ssn": {
+            "type": "string",
+            "nullable": true
+          },
+          "postingDate": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "additionalProperties": false
+      },
+      "CreditAllocation": {
+        "type": "object",
+        "properties": {
+          "invoiceNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "id": {
+            "type": "string",
+            "nullable": true
+          },
+          "meteringPointName": {
+            "type": "string",
+            "nullable": true
+          },
+          "createdDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "paymentDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "amount": {
+            "type": "number",
+            "format": "double"
+          },
+          "creditAllocationType": {
+            "enum": ["Invoice", "Credit", "Unknown"],
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
+      "CustomerStatement": {
+        "type": "object",
+        "properties": {
+          "transactions": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Transaction"
+            },
+            "nullable": true
+          },
+          "requestId": {
+            "type": "string",
+            "nullable": true
+          },
+          "dateFrom": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "dateTo": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "customerPersonNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "customerName": {
+            "type": "string",
+            "nullable": true
+          },
+          "customerStreet": {
+            "type": "string",
+            "nullable": true
+          },
+          "customerPostalCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "customerCity": {
+            "type": "string",
+            "nullable": true
+          },
+          "startingBalance": {
+            "type": "number",
+            "format": "double"
+          },
+          "periodInvoices": {
+            "type": "number",
+            "format": "double"
+          },
+          "periodPayments": {
+            "type": "number",
+            "format": "double"
+          },
+          "periodInterestsAndFees": {
+            "type": "number",
+            "format": "double"
+          },
+          "companySSN": {
+            "type": "string",
+            "nullable": true
+          },
+          "dateRetrieved": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "additionalProperties": false
+      },
+      "DCconnectorType": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "DateTimeData": {
+        "type": "object",
+        "properties": {
+          "time": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "additionalProperties": false
+      },
+      "DefaultVehicle": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "userId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "version": {
+            "$ref": "#/components/schemas/Version"
+          },
+          "isDefaultVehicle": {
+            "type": "boolean"
+          },
+          "hasDefaultCharacteristics": {
+            "type": "boolean"
+          },
+          "inserted": {
+            "$ref": "#/components/schemas/DateTimeData"
+          },
+          "updated": {
+            "$ref": "#/components/schemas/DateTimeData"
+          }
+        },
+        "additionalProperties": false
+      },
+      "DuskyUserInfo": {
+        "type": "object",
+        "properties": {
+          "vehicles": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Vehicle"
+            },
+            "nullable": true
+          },
+          "defaultVehicle": {
+            "$ref": "#/components/schemas/DefaultVehicle"
+          },
+          "gdprConsentVersions": {
+            "type": "array",
+            "items": {},
+            "nullable": true
+          },
+          "termsAndConditions": {
+            "type": "array",
+            "items": {},
+            "nullable": true
+          },
+          "resultCode": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "userData": {
+            "$ref": "#/components/schemas/UserData"
+          },
+          "kennitala": {
+            "type": "string",
+            "nullable": true
+          },
+          "lastLoginType": {
+            "enum": ["PasswordAuthentication", "CertificateAuthentication"],
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
+      "EchoPostBody": {
+        "required": [
+          "requiredDescription",
+          "requiredIntNumber",
+          "requiredNestedEchoPostBody"
+        ],
+        "type": "object",
+        "properties": {
+          "requiredIntNumber": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "requiredDescription": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "requiredNestedEchoPostBody": {
+            "$ref": "#/components/schemas/NestedEchoPostBody"
+          },
+          "intNumber": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "nestedEchoPostBody": {
+            "$ref": "#/components/schemas/NestedEchoPostBody"
+          }
+        },
+        "additionalProperties": false
+      },
+      "ElectronicCredentials": {
+        "required": [
+          "fullName",
+          "id",
+          "nationalId",
+          "phoneNumber",
+          "timeStamp"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "nationalId": {
+            "minLength": 10,
+            "type": "string"
+          },
+          "fullName": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "phoneNumber": {
+            "minLength": 7,
+            "type": "string"
+          },
+          "timeStamp": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "additionalProperties": false
+      },
+      "ID_Title": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "title": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Invoice": {
+        "type": "object",
+        "properties": {
+          "invoiceNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "invoiceType": {
+            "enum": [
+              "Unknown",
+              "FS",
+              "XH",
+              "TI",
+              "R",
+              "A",
+              "U",
+              "H",
+              "B",
+              "S",
+              "I"
+            ],
+            "type": "string"
+          },
+          "invoiceSystem": {
+            "enum": ["B", "G", "H", "K", "L", "R"],
+            "type": "string"
+          },
+          "originSystem": {
+            "enum": ["U", "O"],
+            "type": "string"
+          },
+          "companyId": {
+            "type": "string",
+            "nullable": true
+          },
+          "meteringPointName": {
+            "type": "string",
+            "nullable": true
+          },
+          "createdDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "dueDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "paymentDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "isPaid": {
+            "type": "boolean"
+          },
+          "amount": {
+            "type": "number",
+            "format": "double"
+          },
+          "remainingAmount": {
+            "type": "number",
+            "format": "double"
+          },
+          "documentReferenceToken": {
+            "type": "string",
+            "nullable": true
+          },
+          "creditAllocations": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CreditAllocation"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "MeteringPointInfo": {
+        "type": "object",
+        "properties": {
+          "meterNumber": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "serviceIdendifier": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "meteringPointName": {
+            "type": "string",
+            "nullable": true
+          },
+          "meterPlaceAddress": {
+            "type": "string",
+            "nullable": true
+          },
+          "meterPlacePostalCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "meterPlaceCity": {
+            "type": "string",
+            "nullable": true
+          },
+          "contractStatus": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "NestedEchoPostBody": {
+        "required": ["id"],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ORECSIMLoginResponse": {
+        "type": "object",
+        "properties": {
+          "sagaId": {
+            "type": "string",
+            "nullable": true
+          },
+          "callbackCorrelationId": {
+            "type": "string",
+            "nullable": true
+          },
+          "orecSIMLoginResponseType": {
+            "enum": ["Failure", "Success", "Cancelled", "Error"],
+            "type": "string",
+            "nullable": true
+          },
+          "phoneNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "personNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "fullname": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "OceanGetUserInfoExternalResponse": {
+        "type": "object",
+        "properties": {
+          "callbackCorrelationId": {
+            "type": "string",
+            "nullable": true
+          },
+          "oceanUser": {
+            "$ref": "#/components/schemas/OceanUser"
+          }
+        },
+        "additionalProperties": false
+      },
+      "OceanUser": {
+        "type": "object",
+        "properties": {
+          "externalCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "firstName": {
+            "type": "string",
+            "nullable": true
+          },
+          "lastName": {
+            "type": "string",
+            "nullable": true
+          },
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "email": {
+            "type": "string",
+            "nullable": true
+          },
+          "phone": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "OnEnergyUsageMeteringPointContract": {
+        "type": "object",
+        "properties": {
+          "meterNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "meteringPointId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "serviceIdentifier": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "meteringPointName": {
+            "type": "string",
+            "nullable": true
+          },
+          "meterPlaceAddress": {
+            "type": "string",
+            "nullable": true
+          },
+          "meterPlacePostalCode": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "meterPlaceCity": {
+            "type": "string",
+            "nullable": true
+          },
+          "isCurrentOwner": {
+            "type": "boolean"
+          },
+          "ownershipStart": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "ownershipEnd": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "additionalProperties": false
+      },
+      "OnEnergyUsageMeteringPointDeliveryDTO": {
+        "type": "object",
+        "properties": {
+          "callbackCorrelationId": {
+            "type": "string",
+            "nullable": true
+          },
+          "deliveryEndpointURL": {
+            "type": "string",
+            "nullable": true
+          },
+          "model": {
+            "$ref": "#/components/schemas/OnEnergyUsageMeteringPointResponse"
+          }
+        },
+        "additionalProperties": false
+      },
+      "OnEnergyUsageMeteringPointResponse": {
+        "type": "object",
+        "properties": {
+          "ssn": {
+            "type": "string",
+            "nullable": true
+          },
+          "meteringPointContracts": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/OnEnergyUsageMeteringPointContract"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "OnHomechargeExtraProductPurchase": {
+        "required": ["productNumber", "quantity", "totalPrice", "unitPrice"],
+        "type": "object",
+        "properties": {
+          "productNumber": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "unitPrice": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "quantity": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "totalPrice": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "OnPaymentsCustomer": {
+        "type": "object",
+        "properties": {
+          "isError": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "errorCode": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "errorMessage": {
+            "type": "string",
+            "nullable": true
+          },
+          "isActiveCustomerOfON": {
+            "type": "boolean"
+          },
+          "availablePaymentMethods": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/OnPaymentsPaymentMethod"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "OnPaymentsGetCustomerResponse": {
+        "type": "object",
+        "properties": {
+          "customer": {
+            "$ref": "#/components/schemas/OnPaymentsCustomer"
+          },
+          "callbackCorrelationId": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "OnPaymentsPaymentMethod": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "nullable": true
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "isExternalCardRegistrationForm": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "OnPaymentsSetSimplePaymentMethodRequestPayload": {
+        "required": ["formId", "paymentMethodChangeType"],
+        "type": "object",
+        "properties": {
+          "formId": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "paymentMethodChangeType": {
+            "enum": [
+              "Undefined",
+              "Heimabanki",
+              "Greiðslukort",
+              "Greiðsluseðill"
+            ],
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
+      "OnboardingSubmittedData": {
+        "type": "object",
+        "properties": {
+          "sessionId": {
+            "type": "string",
+            "nullable": true
+          },
+          "contactPhoneNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "contactEmail": {
+            "type": "string",
+            "nullable": true
+          },
+          "propertyIdsToMoveToON": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
+          },
+          "allowSalespersonToContactForHomeCharge": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "OrderApartmentComplexFoundationContact": {
+        "required": ["email", "fullName", "phoneNumber"],
+        "type": "object",
+        "properties": {
+          "fullName": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "phoneNumber": {
+            "minLength": 7,
+            "type": "string"
+          },
+          "email": {
+            "minLength": 1,
+            "type": "string",
+            "format": "email"
+          }
+        },
+        "additionalProperties": false
+      },
+      "OrderApartmentComplexFoundationCustomer": {
+        "required": ["nationalId"],
+        "type": "object",
+        "properties": {
+          "nationalId": {
+            "minLength": 10,
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
+      "OrderApartmentComplexFoundationLocation": {
+        "required": ["city", "street"],
+        "type": "object",
+        "properties": {
+          "street": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "postalCode": {
+            "maximum": 999,
+            "minimum": 100,
+            "type": "integer",
+            "format": "int32"
+          },
+          "city": {
+            "minLength": 1,
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
+      "OrderApartmentComplexFoundationSubmittedData": {
+        "required": ["requestId", "submissionDate", "visitationTime"],
+        "type": "object",
+        "properties": {
+          "requestId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "submissionDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "visitationTime": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "otherInfo": {
+            "type": "string",
+            "nullable": true
+          },
+          "customer": {
+            "$ref": "#/components/schemas/OrderApartmentComplexFoundationCustomer"
+          },
+          "location": {
+            "$ref": "#/components/schemas/OrderApartmentComplexFoundationLocation"
+          },
+          "contact": {
+            "$ref": "#/components/schemas/OrderApartmentComplexFoundationContact"
+          }
+        },
+        "additionalProperties": false
+      },
+      "OrderApartmentContact": {
+        "required": ["email", "fullName", "phoneNumber"],
+        "type": "object",
+        "properties": {
+          "fullName": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "phoneNumber": {
+            "minLength": 7,
+            "type": "string"
+          },
+          "email": {
+            "minLength": 1,
+            "type": "string",
+            "format": "email"
+          }
+        },
+        "additionalProperties": false
+      },
+      "OrderApartmentCosts": {
+        "required": ["subscriptionPrice", "totalExtraProductsPrice"],
+        "type": "object",
+        "properties": {
+          "subscriptionPrice": {
+            "maximum": 2147483647,
+            "minimum": 1,
+            "type": "integer",
+            "format": "int32"
+          },
+          "totalExtraProductsPrice": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "OrderApartmentCustomer": {
+        "required": ["email", "fullName", "nationalId", "phoneNumber"],
+        "type": "object",
+        "properties": {
+          "fullName": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "nationalId": {
+            "minLength": 10,
+            "type": "string"
+          },
+          "phoneNumber": {
+            "minLength": 7,
+            "type": "string"
+          },
+          "email": {
+            "minLength": 1,
+            "type": "string",
+            "format": "email"
+          }
+        },
+        "additionalProperties": false
+      },
+      "OrderApartmentLocation": {
+        "required": ["city", "street"],
+        "type": "object",
+        "properties": {
+          "street": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "postalCode": {
+            "maximum": 999,
+            "minimum": 100,
+            "type": "integer",
+            "format": "int32"
+          },
+          "city": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "parkingSpotDescription": {
+            "type": "string",
+            "nullable": true
+          },
+          "dockNumber": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "OrderApartmentSubmittedData": {
+        "required": [
+          "agreedToTerms",
+          "customer",
+          "extraProductPurchases",
+          "location",
+          "requestId",
+          "submissionDate"
+        ],
+        "type": "object",
+        "properties": {
+          "requestId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "submissionDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "agreedToTerms": {
+            "type": "boolean"
+          },
+          "hasSelectedElectricityOnboarding": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "electronicCredentials": {
+            "$ref": "#/components/schemas/ElectronicCredentials"
+          },
+          "customer": {
+            "$ref": "#/components/schemas/OrderApartmentCustomer"
+          },
+          "contact": {
+            "$ref": "#/components/schemas/OrderApartmentContact"
+          },
+          "location": {
+            "$ref": "#/components/schemas/OrderApartmentLocation"
+          },
+          "extraProductPurchases": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/OnHomechargeExtraProductPurchase"
+            }
+          },
+          "costs": {
+            "$ref": "#/components/schemas/OrderApartmentCosts"
+          }
+        },
+        "additionalProperties": false
+      },
+      "OrderCompanyFoundationContact": {
+        "required": ["email", "fullName", "phoneNumber"],
+        "type": "object",
+        "properties": {
+          "fullName": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "phoneNumber": {
+            "minLength": 7,
+            "type": "string"
+          },
+          "email": {
+            "minLength": 1,
+            "type": "string",
+            "format": "email"
+          }
+        },
+        "additionalProperties": false
+      },
+      "OrderCompanyFoundationCustomer": {
+        "required": ["nationalId"],
+        "type": "object",
+        "properties": {
+          "nationalId": {
+            "minLength": 10,
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
+      "OrderCompanyFoundationLocation": {
+        "required": ["city", "street"],
+        "type": "object",
+        "properties": {
+          "street": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "postalCode": {
+            "maximum": 999,
+            "minimum": 100,
+            "type": "integer",
+            "format": "int32"
+          },
+          "city": {
+            "minLength": 1,
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
+      "OrderCompanyFoundationSubmittedData": {
+        "required": [
+          "customer",
+          "requestId",
+          "submissionDate",
+          "visitationTime"
+        ],
+        "type": "object",
+        "properties": {
+          "requestId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "submissionDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "visitationTime": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "otherInfo": {
+            "type": "string",
+            "nullable": true
+          },
+          "customer": {
+            "$ref": "#/components/schemas/OrderCompanyFoundationCustomer"
+          },
+          "location": {
+            "$ref": "#/components/schemas/OrderCompanyFoundationLocation"
+          },
+          "contact": {
+            "$ref": "#/components/schemas/OrderCompanyFoundationContact"
+          }
+        },
+        "additionalProperties": false
+      },
+      "OrderHouseContact": {
+        "required": ["email", "fullName", "phoneNumber"],
+        "type": "object",
+        "properties": {
+          "fullName": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "phoneNumber": {
+            "minLength": 7,
+            "type": "string"
+          },
+          "email": {
+            "minLength": 1,
+            "type": "string",
+            "format": "email"
+          }
+        },
+        "additionalProperties": false
+      },
+      "OrderHouseCosts": {
+        "required": [
+          "paymentDistributionRequested",
+          "setupRequiresPriceQuote",
+          "subscriptionPrice",
+          "totalExtraProductsPrice",
+          "totalPrice",
+          "totalSetupPrice"
+        ],
+        "type": "object",
+        "properties": {
+          "subscriptionPrice": {
+            "maximum": 2147483647,
+            "minimum": 1,
+            "type": "integer",
+            "format": "int32"
+          },
+          "totalSetupPrice": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "totalExtraProductsPrice": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "totalPrice": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "setupRequiresPriceQuote": {
+            "type": "boolean"
+          },
+          "paymentDistributionRequested": {
+            "type": "boolean"
+          },
+          "paymentDistributedOverNumberOfMonths": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "paymentDistributionPricePerMonth": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "OrderHouseCustomer": {
+        "required": ["email", "fullName", "nationalId", "phoneNumber"],
+        "type": "object",
+        "properties": {
+          "fullName": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "nationalId": {
+            "minLength": 10,
+            "type": "string"
+          },
+          "phoneNumber": {
+            "minLength": 7,
+            "type": "string"
+          },
+          "email": {
+            "minLength": 1,
+            "type": "string",
+            "format": "email"
+          }
+        },
+        "additionalProperties": false
+      },
+      "OrderHouseLocation": {
+        "required": ["city", "street"],
+        "type": "object",
+        "properties": {
+          "street": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "postalCode": {
+            "maximum": 999,
+            "minimum": 100,
+            "type": "integer",
+            "format": "int32"
+          },
+          "city": {
+            "minLength": 1,
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
+      "OrderHouseSetupQuestionAnswer": {
+        "required": ["answerId", "questionId"],
+        "type": "object",
+        "properties": {
+          "questionId": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "answerId": {
+            "minLength": 1,
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
+      "OrderHouseSubmittedData": {
+        "required": [
+          "agreedToTerms",
+          "costs",
+          "customer",
+          "extraProductPurchases",
+          "location",
+          "requestId",
+          "setupQuestionAnswers",
+          "submissionDate"
+        ],
+        "type": "object",
+        "properties": {
+          "requestId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "submissionDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "agreedToTerms": {
+            "type": "boolean"
+          },
+          "hasSelectedElectricityOnboarding": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "electronicCredentials": {
+            "$ref": "#/components/schemas/ElectronicCredentials"
+          },
+          "customer": {
+            "$ref": "#/components/schemas/OrderHouseCustomer"
+          },
+          "contact": {
+            "$ref": "#/components/schemas/OrderHouseContact"
+          },
+          "location": {
+            "$ref": "#/components/schemas/OrderHouseLocation"
+          },
+          "setupDescription": {
+            "type": "string",
+            "nullable": true
+          },
+          "setupQuestionAnswers": {
+            "minItems": 1,
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/OrderHouseSetupQuestionAnswer"
+            }
+          },
+          "extraProductPurchases": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/OnHomechargeExtraProductPurchase"
+            }
+          },
+          "costs": {
+            "$ref": "#/components/schemas/OrderHouseCosts"
+          }
+        },
+        "additionalProperties": false
+      },
+      "ProblemDetails": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string",
+            "nullable": true
+          },
+          "title": {
+            "type": "string",
+            "nullable": true
+          },
+          "status": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "detail": {
+            "type": "string",
+            "nullable": true
+          },
+          "instance": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": {}
+      },
+      "SetUserOrecPasswordResponse": {
+        "type": "object",
+        "properties": {
+          "callbackCorrelationId": {
+            "type": "string",
+            "nullable": true
+          },
+          "passwordUpdatedSuccessfully": {
+            "type": "boolean"
+          },
+          "additionalInformation": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "StandardsCompatibility": {
+        "type": "object",
+        "properties": {
+          "dcCharging": {
+            "type": "boolean"
+          },
+          "ieC61851": {
+            "type": "boolean"
+          },
+          "ieC15118AC": {
+            "type": "boolean"
+          },
+          "ieC15118DC": {
+            "type": "boolean"
+          },
+          "acCharging": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "SubmitFile": {
+        "type": "object",
+        "properties": {
+          "fileId": {
+            "type": "string",
+            "nullable": true
+          },
+          "idOfUploader": {
+            "type": "string",
+            "nullable": true
+          },
+          "idOfSubject": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Transaction": {
+        "type": "object",
+        "properties": {
+          "transactionNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "transactionDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "transactionText": {
+            "type": "string",
+            "nullable": true
+          },
+          "serviceType": {
+            "enum": [
+              "Unknown",
+              "ChargingReceipt",
+              "ChargingSubscription",
+              "EnergyUsage",
+              "Item",
+              "ProductPurchase"
+            ],
+            "type": "string"
+          },
+          "dueDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "explanation": {
+            "type": "string",
+            "nullable": true
+          },
+          "accountNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "transactionAmount": {
+            "type": "number",
+            "format": "double"
+          },
+          "remainingAmount": {
+            "type": "number",
+            "format": "double"
+          },
+          "balance": {
+            "type": "number",
+            "format": "double"
+          }
+        },
+        "additionalProperties": false
+      },
+      "UserData": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "username": {
+            "type": "string",
+            "nullable": true
+          },
+          "userPayerId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "paymentTypeId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "paymentProviderId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "userPayerName": {
+            "type": "string",
+            "nullable": true
+          },
+          "email": {
+            "type": "string",
+            "nullable": true
+          },
+          "gsmNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "uiCultureTitle": {
+            "type": "string",
+            "nullable": true
+          },
+          "uiCulture": {
+            "$ref": "#/components/schemas/UserData_ID_Title"
+          },
+          "defaultTimeZone": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "registrationFormTypeId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "currencyCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "blocked": {
+            "type": "boolean"
+          },
+          "hasFleetAccess": {
+            "type": "boolean"
+          },
+          "allowAddingPaymentCards": {
+            "type": "boolean"
+          },
+          "allowMerchantInitiatedPayment": {
+            "type": "boolean"
+          },
+          "displayPaymentCards": {
+            "type": "boolean"
+          },
+          "skipPreauthorization": {
+            "type": "boolean"
+          },
+          "externalCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "federatedIdentity": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "UserData_ID_Title": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "nullable": true
+          },
+          "title": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "UserInfo": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "personNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "domainUsername": {
+            "type": "string",
+            "nullable": true
+          },
+          "isDomainUser": {
+            "type": "boolean"
+          },
+          "email": {
+            "type": "string",
+            "nullable": true
+          },
+          "phone": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Vehicle": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "vehicleBrand": {
+            "$ref": "#/components/schemas/ID_Title"
+          },
+          "vehicleModel": {
+            "$ref": "#/components/schemas/ID_Title"
+          },
+          "isDefaultVehicle": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Version": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "vehicleBrand": {
+            "$ref": "#/components/schemas/ID_Title"
+          },
+          "vehicleModel": {
+            "$ref": "#/components/schemas/ID_Title"
+          },
+          "maximumRange": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "batteryCapacity": {
+            "type": "number",
+            "format": "double"
+          },
+          "aCconnectorType": {
+            "$ref": "#/components/schemas/ACconnectorType"
+          },
+          "minChargingCurrentAC": {
+            "type": "number",
+            "format": "double"
+          },
+          "maxChargingCurrentAC": {
+            "type": "number",
+            "format": "double"
+          },
+          "numberOfPhases": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "dCconnectorType": {
+            "$ref": "#/components/schemas/DCconnectorType"
+          },
+          "minChargingPowerDC": {
+            "type": "number",
+            "format": "double"
+          },
+          "maxChargingPowerDC": {
+            "type": "number",
+            "format": "double"
+          },
+          "voltageDCCharging": {
+            "type": "number",
+            "format": "double"
+          },
+          "standardsCompatibility": {
+            "$ref": "#/components/schemas/StandardsCompatibility"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "securitySchemes": {
+      "ONToken": {
+        "type": "apiKey",
+        "description": "OnToken Authorization header on the format 'OnToken <token>'\n                        Example: 'OnToken 12345abcdef'",
+        "name": "Authorization",
+        "in": "header"
+      },
+      "SharedSecret": {
+        "type": "apiKey",
+        "description": "SharedSecret Authorization header format 'SharedSecret <secret>'\n                                    Example: 'SharedSecret 12345abcdef'",
+        "name": "Authorization",
+        "in": "header"
+      }
+    }
+  },
+  "security": [
+    {
+      "ONToken": [],
+      "SharedSecret": []
+    }
+  ]
+}
