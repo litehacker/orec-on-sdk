@@ -5,8 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "tsc",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "prepare": "npm run build"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -27,6 +26,11 @@
   },
   "homepage": "https://github.com/litehacker/orec-on-sdk#readme",
   "devDependencies": {
-    "typescript": "^4.9.5"
+    "@types/isomorphic-fetch": "^0.0.39",
+    "typescript": "^5.6.3"
+  },
+  "dependencies": {
+    "@types/node": "^22.9.0",
+    "isomorphic-fetch": "^3.0.0"
   }
 }
